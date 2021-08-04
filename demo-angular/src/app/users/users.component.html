@@ -1,0 +1,27 @@
+<div class="">
+  <button type="button" class="btn btn-danger" routerLink="/edit-component" routerLinkActive="active">Create User</button>
+</div>
+
+<div class="container">
+  <h2>Users</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users.data; let i = index">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
